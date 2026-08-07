@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INK & CODE | Web Development, AI Chatbots & Poster Design</title>
+  <meta name="description" content="Freelance software engineering and visual design studio by INK & CODE. Modern web development, custom AI chatbots, and minimalist poster design.">
+  <meta name="keywords" content="Freelance Web Developer, AI Chatbots, Poster Design, Graphic Design, Fullstack Developer, LLM integration">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="INK & CODE | Web Dev, AI Chatbots & Poster Design">
+  <meta property="og:description" content="Stark monochrome digital studio bridging visual ink artistry with modern software engineering.">
+  <meta property="og:type" content="website">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Canvas Background for Ink Particle Animations -->
+  <canvas id="ink-canvas"></canvas>
+
+  <!-- Sticky Header Navbar -->
+  <header class="header" id="header">
+    <div class="container navbar">
+      <a href="#" class="nav-brand">
+        <img src="assets/logo.png" alt="INK & CODE Logo" class="logo-img">
+        <div class="brand-text">
+          <span class="brand-name">INK & CODE</span>
+          <span class="brand-sub">STUDIO / FREELANCE</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#chatbot" class="nav-link">AI Sandbox</a></li>
+          <li><a href="#work" class="nav-link">Portfolio</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <a href="#contact" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.88rem;">Start Project</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span>
+            <span>AVAILABLE FOR FREELANCE & CONTRACT PROJECTS</span>
+          </div>
+
+          <h1 class="hero-title">
+            Fusing Creative <span class="ink-text">Ink</span> Artistry With Intelligent <span class="code-text">&lt;CODE&gt;</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            I craft ultra-responsive websites, build autonomous AI chatbots, and design bold minimalist posters for forward-thinking brands and creators.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-primary">
+              <span>View Portfolio</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#chatbot" class="btn btn-secondary">
+              <span>Test AI Chatbot Sandbox</span>
+              <i data-lucide="bot"></i>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Custom Code & Design</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">3</span>
+              <span class="stat-label">Specialized Core Pillars</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">&lt;24h</span>
+              <span class="stat-label">Response Time</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="layers"></i>
+            <span>Core Capabilities</span>
+          </div>
+          <h2 class="section-title">What I Build & Design</h2>
+          <p class="section-desc">Tailored freelance engineering and graphic design services delivered with precision and speed.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: Web Development -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i data-lucide="code-2"></i>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-desc">Modern, high-performance static pages, web applications, and portfolio sites engineered for speed, SEO, and aesthetics.</p>
+            <ul class="service-features">
+              <li><i data-lucide="check" size="16"></i> Responsive & Mobile-first Layouts</li>
+              <li><i data-lucide="check" size="16"></i> Glassmorphism & Micro-animations</li>
+              <li><i data-lucide="check" size="16"></i> Next.js, Vite, React, Vanilla JS</li>
+              <li><i data-lucide="check" size="16"></i> Fast Loading & SEO Optimization</li>
+            </ul>
+            <div class="service-tags">
+              <span class="tag">HTML5/CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">React/Vite</span>
+              <span class="tag">Tailwind/Vanilla</span>
+            </div>
+          </div>
+
+          <!-- Service 2: AI Chatbot Solutions -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i data-lucide="bot"></i>
+            </div>
+            <h3 class="service-title">AI Chatbots & Agents</h3>
+            <p class="service-desc">Smart conversational AI bots customized to automate customer inquiries, qualify leads, and connect to knowledge bases.</p>
+            <ul class="service-features">
+              <li><i data-lucide="check" size="16"></i> Custom LLM & OpenAI/Claude Integration</li>
+              <li><i data-lucide="check" size="16"></i> Interactive Website Embed Widgets</li>
+              <li><i data-lucide="check" size="16"></i> Lead Qualification & FAQ Automations</li>
+              <li><i data-lucide="check" size="16"></i> Context-Aware Intelligent Responses</li>
+            </ul>
+            <div class="service-tags">
+              <span class="tag">OpenAI API</span>
+              <span class="tag">Python</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">NLP</span>
+            </div>
+          </div>
+
+          <!-- Service 3: Poster & Graphic Design -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <i data-lucide="palette"></i>
+            </div>
+            <h3 class="service-title">Poster & Graphic Design</h3>
+            <p class="service-desc">Striking visual artwork, brutalist event posters, typography posters, and branding collaterals crafted in high-contrast ink style.</p>
+            <ul class="service-features">
+              <li><i data-lucide="check" size="16"></i> Print-Ready High Resolution Artwork</li>
+              <li><i data-lucide="check" size="16"></i> Stark Monochrome & Minimal Aesthetics</li>
+              <li><i data-lucide="check" size="16"></i> Event, Tech & Music Branding Posters</li>
+              <li><i data-lucide="check" size="16"></i> Custom Vector Typography</li>
+            </ul>
+            <div class="service-tags">
+              <span class="tag">Figma</span>
+              <span class="tag">Photoshop</span>
+              <span class="tag">Illustrator</span>
+              <span class="tag">Brutalism</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive AI Chatbot Sandbox Section -->
+    <section class="section chatbot-section" id="chatbot">
+      <div class="container">
+        <div class="chatbot-wrapper">
+          <div class="chatbot-info">
+            <div class="section-tag">
+              <i data-lucide="sparkles"></i>
+              <span>Live Demonstration</span>
+            </div>
+            <h2 class="section-title">Test the AI Chatbot Playground</h2>
+            <p class="section-desc" style="margin-bottom: 24px;">
+              Experience how a custom AI Chatbot can transform client interaction on your website. Chat live with <strong>InkBot</strong> right now to get instant answers about services, pricing, or tech stack!
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem;">
+                <div style="width: 32px; height: 32px; background: rgba(255,255,255,0.06); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i data-lucide="zap" size="18"></i></div>
+                <span>Instant response within milliseconds</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px; font-size: 0.95rem;">
+                <div style="width: 32px; height: 32px; background: rgba(255,255,255,0.06); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i data-lucide="cpu" size="18"></i></div>
+                <span>Trained on Web Dev, AI & Design knowledge</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chatbot Widget Window -->
+          <div class="chatbot-widget">
+            <div class="widget-header">
+              <div class="bot-profile">
+                <div class="bot-avatar">I&C</div>
+                <div>
+                  <div class="bot-name">InkBot AI Assistant</div>
+                  <div class="bot-status">Online • Ready to help</div>
+                </div>
+              </div>
+              <button id="clear-chat" title="Clear Chat" style="background:none; border:none; color:var(--text-secondary); cursor:pointer;"><i data-lucide="rotate-ccw" size="16"></i></button>
+            </div>
+
+            <div class="chat-body" id="chat-body">
+              <div class="chat-msg bot">
+                <div class="msg-bubble">
+                  Hello! I'm <strong>InkBot</strong>, the AI assistant for INK & CODE studio. How can I help you today? You can ask me about Web Development, AI Chatbots, or Poster Design packages!
+                </div>
+              </div>
+            </div>
+
+            <div class="quick-prompts">
+              <button class="quick-chip" data-prompt="What web development packages do you offer?">🌐 Web Dev Packages</button>
+              <button class="quick-chip" data-prompt="How do custom AI chatbots work?">🤖 AI Chatbots Info</button>
+              <button class="quick-chip" data-prompt="Can I see poster design pricing?">🎨 Poster Pricing</button>
+              <button class="quick-chip" data-prompt="How do we start a project?">🚀 Start Project</button>
+            </div>
+
+            <form class="chat-input-row" id="chat-form">
+              <input type="text" id="chat-input" class="chat-input" placeholder="Ask InkBot a question..." autocomplete="off">
+              <button type="submit" class="send-btn" aria-label="Send Message">
+                <i data-lucide="send" size="18"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio & Poster Showcase Section -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <i data-lucide="briefcase"></i>
+            <span>Selected Projects</span>
+          </div>
+          <h2 class="section-title">Portfolio Showcase</h2>
+          <p class="section-desc">Explore recent works spanning high-contrast posters, custom web platforms, and AI chatbot integrations.</p>
+        </div>
+
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">ALL WORKS</button>
+          <button class="filter-btn" data-filter="posters">POSTER DESIGNS</button>
+          <button class="filter-btn" data-filter="web">WEB DEVELOPMENT</button>
+          <button class="filter-btn" data-filter="ai">AI CHATBOTS</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Poster 1 -->
+          <div class="portfolio-card" data-category="posters">
+            <div class="card-img-wrapper">
+              <img src="assets/posters/poster1.png" alt="Monochrome Abstract Poster" class="card-img">
+              <span class="card-badge">Poster Design</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Ink & Fluidity - Graphic Poster</h3>
+              <p class="card-desc">High contrast conceptual exhibit poster blending stark typography with liquid black ink aesthetics.</p>
+              <div class="card-actions">
+                <button class="view-btn open-lightbox" data-img="assets/posters/poster1.png" data-title="Ink & Fluidity - Graphic Poster">
+                  <span>View Full Art</span>
+                  <i data-lucide="maximize-2" size="16"></i>
+                </button>
+                <span class="tag">Print / 300DPI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Poster 2 -->
+          <div class="portfolio-card" data-category="posters">
+            <div class="card-img-wrapper">
+              <img src="assets/posters/poster2.png" alt="Cybernetic AI Poster" class="card-img">
+              <span class="card-badge">Poster Design</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Neural Grid - Cyber AI Poster</h3>
+              <p class="card-desc">Brutalist poster featuring neural network visual nodes, code lines, and stark grid geometry.</p>
+              <div class="card-actions">
+                <button class="view-btn open-lightbox" data-img="assets/posters/poster2.png" data-title="Neural Grid - Cyber AI Poster">
+                  <span>View Full Art</span>
+                  <i data-lucide="maximize-2" size="16"></i>
+                </button>
+                <span class="tag">Vector / Branding</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Dev 1 -->
+          <div class="portfolio-card" data-category="web">
+            <div class="card-img-wrapper">
+              <img src="assets/posters/poster4.png" alt="Modern Web Application Mockup" class="card-img">
+              <span class="card-badge">Web Dev</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Veloce Dark SaaS Platform</h3>
+              <p class="card-desc">Ultra-fast web platform built with React, Vite, and custom CSS glassmorphism components.</p>
+              <div class="card-actions">
+                <a href="#contact" class="view-btn">
+                  <span>Case Study</span>
+                  <i data-lucide="arrow-up-right" size="16"></i>
+                </a>
+                <span class="tag">React / Vite</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Poster 3 -->
+          <div class="portfolio-card" data-category="posters">
+            <div class="card-img-wrapper">
+              <img src="assets/posters/poster3.png" alt="Brutalist Typography Poster" class="card-img">
+              <span class="card-badge">Poster Design</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Monochrome Typography Series</h3>
+              <p class="card-desc">Oversized typography showcase poster utilizing raw negative space and ink splash accents.</p>
+              <div class="card-actions">
+                <button class="view-btn open-lightbox" data-img="assets/posters/poster3.png" data-title="Monochrome Typography Series">
+                  <span>View Full Art</span>
+                  <i data-lucide="maximize-2" size="16"></i>
+                </button>
+                <span class="tag">Poster Art</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Chatbot Project -->
+          <div class="portfolio-card" data-category="ai">
+            <div class="card-img-wrapper">
+              <img src="assets/posters/poster2.png" alt="AI Agent Workflow" class="card-img">
+              <span class="card-badge">AI Chatbot</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">OmniSupport AI Assistant</h3>
+              <p class="card-desc">Enterprise customer support chatbot trained on proprietary knowledge bases using OpenAI API.</p>
+              <div class="card-actions">
+                <a href="#chatbot" class="view-btn">
+                  <span>Live Demo</span>
+                  <i data-lucide="bot" size="16"></i>
+                </a>
+                <span class="tag">Python / OpenAI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Web Dev 2 -->
+          <div class="portfolio-card" data-category="web">
+            <div class="card-img-wrapper">
+              <img src="assets/posters/poster4.png" alt="Minimalist Portfolio" class="card-img">
+              <span class="card-badge">Web Dev</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Noir Portfolio System</h3>
+              <p class="card-desc">Monochrome static portfolio site optimized for high Lighthouse performance scores and mobile devices.</p>
+              <div class="card-actions">
+                <a href="#contact" class="view-btn">
+                  <span>View Project</span>
+                  <i data-lucide="arrow-up-right" size="16"></i>
+                </a>
+                <span class="tag">HTML / Vanilla CSS</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Stack Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <div class="section-tag">
+              <i data-lucide="user"></i>
+              <span>Philosophy</span>
+            </div>
+            <h2 class="section-title">Where Ink Meets Code</h2>
+            <p>
+              I am a freelance engineer and graphic designer operating under the banner of <strong>INK & CODE</strong>. My work stands at the intersection of stark aesthetic design ("Ink") and robust software engineering ("Code").
+            </p>
+            <p>
+              Whether crafting clean responsive web applications, building context-aware AI chatbots, or designing bold graphic posters, I focus on delivering high-impact solutions with zero clutter.
+            </p>
+            <div style="margin-top: 30px; display: flex; gap: 16px;">
+              <a href="#contact" class="btn btn-primary">Hire Me</a>
+              <a href="#work" class="btn btn-secondary">Explore Work</a>
+            </div>
+          </div>
+
+          <div>
+            <h3 style="font-family: var(--font-heading); margin-bottom: 20px;">Technologies & Tools</h3>
+            <div class="stack-grid">
+              <div class="stack-item">
+                <i data-lucide="code" class="stack-icon"></i>
+                <span class="stack-name">HTML5 / CSS3</span>
+              </div>
+              <div class="stack-item">
+                <i data-lucide="terminal" class="stack-icon"></i>
+                <span class="stack-name">JavaScript ES6+</span>
+              </div>
+              <div class="stack-item">
+                <i data-lucide="atom" class="stack-icon"></i>
+                <span class="stack-name">React / Vite</span>
+              </div>
+              <div class="stack-item">
+                <i data-lucide="bot" class="stack-icon"></i>
+                <span class="stack-name">OpenAI API</span>
+              </div>
+              <div class="stack-item">
+                <i data-lucide="cpu" class="stack-icon"></i>
+                <span class="stack-name">Python LLMs</span>
+              </div>
+              <div class="stack-item">
+                <i data-lucide="pen-tool" class="stack-icon"></i>
+                <span class="stack-name">Figma / Photoshop</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div>
+              <div class="section-tag">
+                <i data-lucide="mail"></i>
+                <span>Get In Touch</span>
+              </div>
+              <h2 class="section-title">Let's Build Something Great Together</h2>
+              <p class="section-desc">Have a project in mind for Web Development, AI Chatbots, or Poster Design? Drop a message and let's get started.</p>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="mail"></i></div>
+              <div class="contact-text">
+                <h4>Email Directly</h4>
+                <a href="mailto:shakthiisivakumar@gmail.com">shakthiisivakumar@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="phone"></i></div>
+              <div class="contact-text">
+                <h4>Phone / WhatsApp</h4>
+                <a href="tel:9566656841">+91 9566656841</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon"><i data-lucide="clock"></i></div>
+              <div class="contact-text">
+                <h4>Turnaround Time</h4>
+                <p>Fast responses within 24 hours</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/shakthiisivakumar@gmail.com" method="POST">
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem;">Send a Project Inquiry</h3>
+            
+            <div class="form-group">
+              <label class="form-label" for="contact-name">YOUR NAME</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Morgan" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">YOUR EMAIL</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-phone">YOUR PHONE NUMBER</label>
+              <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="e.g. 9566656841">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-service">SERVICE REQUIRED</label>
+              <select id="contact-service" name="service" class="form-select">
+                <option value="Web Development">Web Development</option>
+                <option value="AI Chatbot Integration">AI Chatbot Integration</option>
+                <option value="Poster & Graphic Design">Poster & Graphic Design</option>
+                <option value="Full Package (Web + AI + Design)">Full Package (Web + AI + Design)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-msg">PROJECT DETAILS</label>
+              <textarea id="contact-msg" name="message" class="form-textarea" placeholder="Tell me about your project scope, goals, or budget..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Send Project Inquiry</span>
+              <i data-lucide="send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <img src="assets/logo.png" alt="INK & CODE Logo" style="height: 36px; background: #fff; padding: 2px 6px; border-radius: 4px;">
+          <span style="font-family: var(--font-heading); font-weight: 700; letter-spacing: 1px;">INK & CODE</span>
+        </div>
+
+        <div style="display: flex; gap: 20px; font-size: 0.9rem; color: var(--text-secondary);">
+          <a href="#services" style="color: inherit; text-decoration: none;">Services</a>
+          <a href="#chatbot" style="color: inherit; text-decoration: none;">AI Chatbot</a>
+          <a href="#work" style="color: inherit; text-decoration: none;">Portfolio</a>
+          <a href="#contact" style="color: inherit; text-decoration: none;">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 INK & CODE Studio. All rights reserved.</span>
+        <span>Stark Black & White Portfolio</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Image Modal -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <img src="" alt="" class="lightbox-img" id="lightbox-img">
+      <div class="lightbox-title" id="lightbox-title"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="main.js"></script>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
